@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/black"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tv_title_dialog"
+        style="@style/muli20bold"
+        android:text="@string/title_save_exercise_dialog"
+        android:textColor="@color/primary_ligth"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_msg_dialog"
+        style="@style/muli16"
+        android:text="@string/msg_save_exercise_dialog"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_dialog"
+        android:textColor="@color/primary_ligth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_exercise_name"
+        style="@style/muli16"
+        android:textColor="@color/primary_ligth"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp"
+        android:text="@string/exercise_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_msg_dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/et_exercise_name"
+        android:textColor="@color/primary_ligth"
+        android:backgroundTint="@color/primary_ligth"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@id/tv_exercise_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/ll_exercise_summary"
+        android:orientation="vertical"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_exercise_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_cancel"
+        style="@style/borderButton"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/transparent"
+        android:text="@string/cancel"
+        android:textColor="@color/primary_ligth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_exercise_summary" />
+
+    <Button
+        android:id="@+id/btn_accept"
+        style="@style/borderButton"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/transparent"
+        android:text="@string/accept"
+        android:textColor="@color/primary_ligth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_exercise_summary" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
